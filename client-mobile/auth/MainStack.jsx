@@ -1,0 +1,39 @@
+import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import TabNavigator from '../screens/TabScreens/TabNavigator';
+import Notification from '../screens/StackScreens/Notifications';
+import MessageChat from '../screens/StackScreens/MessageChat';
+import DirectMessage from '../screens/StackScreens/DirectMessage';
+import Settings from '../screens/StackScreens/Settings';
+import OthersProfile from '../screens/StackScreens/OthersProfile';
+import RecentSearch from '../screens/StackScreens/RecentSearch';
+import Teleprompter from '../screens/StackScreens/Teleprompter';
+import CameraRecording from '../screens/StackScreens/CameraRecording';
+import EditingVideoScreen from '../screens/StackScreens/EditingVideoScreen';
+import PostContentScreen from '../screens/StackScreens/PostContentScreen';
+import BuyContent from '../screens/StackScreens/BuyContent';
+
+
+const Stack = createNativeStackNavigator();
+
+const MainStack = () => {
+	return (
+		<Stack.Navigator screenOptions={{ headerShown: false }}>
+			<Stack.Screen name='TabNavigator' component={TabNavigator} />
+			<Stack.Screen name="Notification" component={Notification}/>
+			<Stack.Screen name='MessageChat' component={MessageChat} />
+			<Stack.Screen name='DirectMessage' component={DirectMessage} />
+			<Stack.Screen name='Settings' component={Settings} />
+			<Stack.Screen name='OthersProfile' component={OthersProfile} />
+			<Stack.Screen name='RecentSearch' component={RecentSearch} />
+			<Stack.Screen name='CameraRecording' component={CameraRecording} />
+			<Stack.Screen name='Teleprompter' component={Teleprompter} />
+			<Stack.Screen name='EditingVideoScreen' component={EditingVideoScreen} />
+			<Stack.Screen name='PostContentScreen' component={PostContentScreen} />
+			<Stack.Screen name='BuyContent' component={BuyContent} />			
+		</Stack.Navigator>
+	);
+};
+
+export default MainStack;
